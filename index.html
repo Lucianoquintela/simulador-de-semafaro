@@ -3,22 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Semáforo 🚦</title>
-    
+    <title>Semáforo 🚦</title>  
 </head>
 
 <body>
   <section>
-
     <div class="semafaro-container">
       <div class="vermelho" id="luz-vermelha"></div>
       <div class="amarelo" id="luz-amarela"></div>
       <div class="verde" id="luz-verde"></div>
     </div>
-
   </section>
 </body>
-
 
 <style>
 *{
@@ -28,21 +24,18 @@
 
 body, html{
 background: linear-gradient(180deg, #000000, #0a0a0a, #1a1a1a);;
-height:100vh;
-        
+height:100vh;        
 }
 
 section{
     display: grid;
     place-items: center;
-    height:100vh;      
-         
+    height:100vh;              
 }
 
 section .semafaro-container{
     background-color:#4F4F4F;
-    border-radius:10px;
-    
+    border-radius:10px;   
     width:40%;
     max-width:500px;
     height:500px;
@@ -55,21 +48,12 @@ section .semafaro-container{
     padding:30px;
 }
 
-
-
 .vermelho, .amarelo, .verde{ 
   width:150px;
   height:150px;
   border-radius:50%;
-  background-color:gray;
-             
-             
-            
+  background-color:gray;                                     
 }
-
-
-
-
 </style>
 
 <script>
@@ -79,27 +63,26 @@ const luzVerde = document.getElementById("luz-verde");
 let estado = 0;
 
         function trocarCores() {
-            if (estado === 0) {               luzVermelha.style.backgroundColor = "red";  
-                         
-  luzVerde.style.backgroundColor = "gray";
-  
-  luzVermelha.style.boxShadow = "0 0 100px LightSalmon"; // Adicionando boxShadow aqui
-  
-  luzVerde.style.boxShadow = "none";
+            if (estado === 0) {    
+              luzVermelha.style.backgroundColor = "red";                       
+              luzVerde.style.backgroundColor = "gray";
+                
+              luzVermelha.style.boxShadow = "0 0 100px LightSalmon";
+              luzVerde.style.boxShadow = "none";
   
   
                 estado = 1;
             } else if (estado === 1) {
                 luzVermelha.style.backgroundColor = "gray";
                luzAmarela.style.backgroundColor = "yellow";
-              luzAmarela.style.boxShadow = "0 0 100px LightYellow"; // Adicionando boxShadow aqui  
+                
+              luzAmarela.style.boxShadow = "0 0 100px LightYellow";  
               luzVermelha.style.boxShadow = "none";   
                 estado = 2;
-            } else if (estado === 2) {
-                
+            } else if (estado === 2) {              
                 luzAmarela.style.backgroundColor = "gray";
                 luzVerde.style.backgroundColor = "green";
-                
+             
      luzVerde.style.boxShadow = "0 0 100px LightGreen";           
      luzAmarela.style.boxShadow = "none";  
                 
